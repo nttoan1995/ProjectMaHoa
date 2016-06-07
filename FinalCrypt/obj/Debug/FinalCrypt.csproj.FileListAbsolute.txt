@@ -1,0 +1,9 @@
+c:\users\khanh\documents\visual studio 2015\Projects\FinalCrypt\FinalCrypt\bin\Debug\FinalCrypt.exe.config
+c:\users\khanh\documents\visual studio 2015\Projects\FinalCrypt\FinalCrypt\bin\Debug\FinalCrypt.exe
+c:\users\khanh\documents\visual studio 2015\Projects\FinalCrypt\FinalCrypt\bin\Debug\FinalCrypt.pdb
+c:\users\khanh\documents\visual studio 2015\Projects\FinalCrypt\FinalCrypt\obj\Debug\FinalCrypt.csprojResolveAssemblyReference.cache
+c:\users\khanh\documents\visual studio 2015\Projects\FinalCrypt\FinalCrypt\obj\Debug\FinalCrypt.Form1.resources
+c:\users\khanh\documents\visual studio 2015\Projects\FinalCrypt\FinalCrypt\obj\Debug\FinalCrypt.Properties.Resources.resources
+c:\users\khanh\documents\visual studio 2015\Projects\FinalCrypt\FinalCrypt\obj\Debug\FinalCrypt.csproj.GenerateResource.Cache
+c:\users\khanh\documents\visual studio 2015\Projects\FinalCrypt\FinalCrypt\obj\Debug\FinalCrypt.exe
+c:\users\khanh\documents\visual studio 2015\Projects\FinalCrypt\FinalCrypt\obj\Debug\FinalCrypt.pdb
