@@ -9,19 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using System.Security.Cryptography;
-using System.IO;
-
 namespace FinalCrypt
 {
     public partial class _dangki : Form
     {
-        private static Random random = new Random((int)DateTime.Now.Ticks);
-        private string salt = "";
-        private string hashpassphrase = "";
         public _dangki()
         {
             InitializeComponent();
         }
+
         /// <summary>
         /// Hàm kiểm tra định dạng email
         /// </summary>
@@ -94,45 +90,16 @@ namespace FinalCrypt
             return true;
 
         }
-        /// <summary>
-        /// Hàm phát sinh ngẫu nhiên giá trị salt
-        /// </summary>
-        /// <param name="len">Độ dài của salt</param>
-        /// <returns></returns>
-        private string randomsalt(int size)
-        {
-            StringBuilder builder = new StringBuilder();
-            char ch;
-            for (int i = 0; i < size; i++)
-            {
-                ch = Convert.ToChar(Convert.ToInt32(Math.Floor(26 * random.NextDouble() + 256)));
-                builder.Append(ch);
-            }
-            return builder.ToString();
-        }
-        /// <summary>
-        /// Hàm hash một chuỗi bất kì
-        /// </summary>
-        /// <param name="data">Chuỗi cần hash</param>
-        /// <param name="salt"></param>
-        /// <param name="algorithm">Thuật toán hash</param>
-        /// <returns></returns>
         private string StringToHash(string data, string salt, HashAlgorithm algorithm)
         {
             byte[] saltedBytes = Encoding.UTF8.GetBytes(data + salt);     // Combine the data with the salt
             byte[] hashedBytes = algorithm.ComputeHash(saltedBytes);      // Compute the hash value of our input
             return BitConverter.ToString(hashedBytes);
         }
-        /// <summary>
-        /// Kiểm tra người dùng có nhập đúng pass không
-        /// </summary>
-        /// <returns></returns>
         private bool ktpassphrase()
         {
-            salt = randomsalt(1000);
-            string strpassphrase = StringToHash(passpharase.Text, salt, new MD5CryptoServiceProvider());
-            string strrepassphrase = StringToHash(repassphrase.Text, salt, new MD5CryptoServiceProvider());
-            hashpassphrase = strpassphrase;
+            string strpassphrase = StringToHash(passpharase.Text, "ToanThienIT", new MD5CryptoServiceProvider());
+            string strrepassphrase = StringToHash(repassphrase.Text, "ToanThienIT", new MD5CryptoServiceProvider());
             if (strpassphrase == strrepassphrase)
                 return true;
             return false;
@@ -175,7 +142,6 @@ namespace FinalCrypt
                     "Lỗi nhập thông tin", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            
             return true;
         }
 
@@ -194,12 +160,6 @@ namespace FinalCrypt
                     //thi hành tăng ProgressBar
                     progressBar1.PerformStep();
                 }
-                //Lưu thông tin
-                StreamWriter fs = new StreamWriter("data.txt");
-                _nguoidung nguoidungmoi = new _nguoidung(email.Text, hoten.Text, ngaysinh.Text, diachi.Text, dienthoai.Text, dodaikhoa.Text, hashpassphrase, salt);
-                nguoidungmoi.ghithongtin(fs);
-                fs.Close();
-                //------------------------------
                 MessageBox.Show("Hoàn tất đăng kí và phát sinh khóa", "Info", MessageBoxButtons.OK);
                 this.Close();
             }

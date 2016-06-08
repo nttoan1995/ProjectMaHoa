@@ -9,14 +9,15 @@ namespace FinalCrypt
 {
     class _danhsachnguoidung
     {
-        private _nguoidung[] dsnguoidung;
-        private int soluongnguoidung;
+        private List<_nguoidung> dsnguoidung = new List<_nguoidung>();
         public _danhsachnguoidung(StreamReader fs)
         {
-            soluongnguoidung = Convert.ToInt32(fs.ReadLine());
-            dsnguoidung = new _nguoidung[soluongnguoidung];
-            for (int i = 0; i < soluongnguoidung; i++)
-                dsnguoidung[i].docthongtin(fs);
+            while( !fs.EndOfStream)
+            {
+                _nguoidung nguoidunghientai = new _nguoidung();
+                nguoidunghientai.docthongtin(fs);
+                dsnguoidung.Add(nguoidunghientai);
+            }
         }
 
     }

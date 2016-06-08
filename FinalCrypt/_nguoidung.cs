@@ -18,6 +18,18 @@ namespace FinalCrypt
         private string passphrase = "";
         private string salt = "";
 
+        public _nguoidung()
+        {
+            email = "";
+            hoten = ""; 
+            ngaysinh = "";
+            diachi = "";
+            sodienthoai = "";
+            dodaikhoa = "";
+            passphrase = "";
+            salt = "";
+        }
+
         public _nguoidung(string _email, 
                             string _hoten,
                             string _ngaysinh,
@@ -28,6 +40,7 @@ namespace FinalCrypt
                             string _salt)
         {
             email = _email;
+            hoten = _hoten;
             ngaysinh = _ngaysinh;
             diachi = _diachi;
             sodienthoai = _sodienthoai;
@@ -41,14 +54,19 @@ namespace FinalCrypt
         /// <param name="fs">File lưu thông tin người dùng</param>
         public void ghithongtin(StreamWriter fs)
         {
-            string data = email + "\n" + ngaysinh + "\n" + diachi + "\n"
-                + sodienthoai + "\n" + dodaikhoa + "\n" + passphrase + "\n"
-                + salt;
-            fs.WriteLine(data);
+            fs.WriteLine(email);
+            fs.WriteLine(hoten);
+            fs.WriteLine(ngaysinh);
+            fs.WriteLine(diachi);
+            fs.WriteLine(sodienthoai);
+            fs.WriteLine(dodaikhoa);
+            fs.WriteLine(passphrase);
+            fs.WriteLine(salt);
         }
         public void docthongtin(StreamReader fs)
         {
             email = fs.ReadLine();
+            hoten = fs.ReadLine();
             ngaysinh = fs.ReadLine();
             diachi = fs.ReadLine();
             sodienthoai = fs.ReadLine();
