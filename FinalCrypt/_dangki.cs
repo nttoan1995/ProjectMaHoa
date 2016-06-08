@@ -21,18 +21,6 @@ namespace FinalCrypt
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int key_size = Int32.Parse(dodaikhoa.Text);
-            RSA rsa = new RSA(key_size);
-
-            //kiểm tra
-            kt();
-            //key_pair
-            string publicKey, privateKey;
-
-            // Generate RSA key pair
-            rsa.GenerateKeys(out publicKey, out privateKey);
-
-
             progressBar1.Minimum = 0;
             progressBar1.Maximum = 100;
             progressBar1.Value = 0;
@@ -46,12 +34,6 @@ namespace FinalCrypt
             }
             MessageBox.Show("Hoàn tất đăng kí và phát sinh khóa", "Info", MessageBoxButtons.OK);
             this.Close();
-        }
-
-        bool kt()
-        {
-
-            return true;
         }
     }
 }
