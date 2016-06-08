@@ -7,8 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Text.RegularExpressions; 
-
+using System.Text.RegularExpressions;
+using System.Security.Cryptography;
 namespace FinalCrypt
 {
     public partial class _dangki : Form
@@ -90,6 +90,20 @@ namespace FinalCrypt
             return true;
 
         }
+        private string StringToHash(string data, string salt, HashAlgorithm algorithm)
+        {
+            byte[] saltedBytes = Encoding.UTF8.GetBytes(data + salt);     // Combine the data with the salt
+            byte[] hashedBytes = algorithm.ComputeHash(saltedBytes);      // Compute the hash value of our input
+            return BitConverter.ToString(hashedBytes);
+        }
+        private bool ktpassphrase()
+        {
+            string strpassphrase = StringToHash(passpharase.Text, "ToanThienIT", new MD5CryptoServiceProvider());
+            string strrepassphrase = StringToHash(repassphrase.Text, "ToanThienIT", new MD5CryptoServiceProvider());
+            if (strpassphrase == strrepassphrase)
+                return true;
+            return false;
+        }
         /// <summary>
         /// Hàm kiểm tra thông tin người dùng nhập vào
         /// </summary>
@@ -119,6 +133,12 @@ namespace FinalCrypt
             if (ktdodaikhoa() == false)
             {
                 MessageBox.Show("Độ dài khóa không hợp lệ\nĐộ dài khóa trong khoảng 512 - 1024 và là bộ của 64",
+                    "Lỗi nhập thông tin", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            if (ktpassphrase() == false)
+            {
+                MessageBox.Show("Passphrase không hợp lệ\nPhải đảm bảo nhập chính xác password",
                     "Lỗi nhập thông tin", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
