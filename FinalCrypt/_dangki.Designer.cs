@@ -208,6 +208,7 @@
             this.repassphrase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.repassphrase.Location = new System.Drawing.Point(145, 95);
             this.repassphrase.Name = "repassphrase";
+            this.repassphrase.PasswordChar = '*';
             this.repassphrase.Size = new System.Drawing.Size(221, 22);
             this.repassphrase.TabIndex = 5;
             // 
@@ -217,6 +218,7 @@
             this.passpharase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passpharase.Location = new System.Drawing.Point(145, 61);
             this.passpharase.Name = "passpharase";
+            this.passpharase.PasswordChar = '*';
             this.passpharase.Size = new System.Drawing.Size(221, 22);
             this.passpharase.TabIndex = 4;
             // 
@@ -305,11 +307,11 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox repassphrase;
         private System.Windows.Forms.TextBox passpharase;
-        private System.Windows.Forms.TextBox dodaikhoa;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.DateTimePicker ngaysinh;
+        private System.Windows.Forms.TextBox dodaikhoa;
     }
 }
