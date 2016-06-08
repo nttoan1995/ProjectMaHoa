@@ -58,6 +58,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="_danhsachnguoidung.cs" />
+    <Compile Include="_nguoidung.cs" />
     <EmbeddedResource Include="_dangki.resx">
       <DependentUpon>_dangki.cs</DependentUpon>
     </EmbeddedResource>
