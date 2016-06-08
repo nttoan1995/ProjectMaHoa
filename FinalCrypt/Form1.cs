@@ -16,5 +16,13 @@ namespace FinalCrypt
         {
             InitializeComponent();
         }
+
+        private void dangki_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            _dangki dk = new _dangki();
+            dk.ShowDialog();
+            this.Show();
+        }
     }
 }
