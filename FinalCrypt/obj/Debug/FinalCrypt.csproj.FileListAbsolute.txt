@@ -8,3 +8,13 @@ E:\Nam3\HK2\MHUD\BT\FinalCrypt\FinalCrypt\obj\Debug\FinalCrypt.csproj.GenerateRe
 E:\Nam3\HK2\MHUD\BT\FinalCrypt\FinalCrypt\obj\Debug\FinalCrypt.exe
 E:\Nam3\HK2\MHUD\BT\FinalCrypt\FinalCrypt\obj\Debug\FinalCrypt.pdb
 E:\Nam3\HK2\MHUD\BT\FinalCrypt\FinalCrypt\obj\Debug\FinalCrypt._dangki.resources
+C:\Users\khanh\Documents\GitHub\ProjectMaHoa\FinalCrypt\bin\Debug\FinalCrypt.exe.config
+C:\Users\khanh\Documents\GitHub\ProjectMaHoa\FinalCrypt\obj\Debug\FinalCrypt.exe
+C:\Users\khanh\Documents\GitHub\ProjectMaHoa\FinalCrypt\obj\Debug\FinalCrypt.pdb
+C:\Users\khanh\Documents\GitHub\ProjectMaHoa\FinalCrypt\bin\Debug\FinalCrypt.exe
+C:\Users\khanh\Documents\GitHub\ProjectMaHoa\FinalCrypt\bin\Debug\FinalCrypt.pdb
+C:\Users\khanh\Documents\GitHub\ProjectMaHoa\FinalCrypt\obj\Debug\FinalCrypt.csprojResolveAssemblyReference.cache
+C:\Users\khanh\Documents\GitHub\ProjectMaHoa\FinalCrypt\obj\Debug\FinalCrypt._dangki.resources
+C:\Users\khanh\Documents\GitHub\ProjectMaHoa\FinalCrypt\obj\Debug\FinalCrypt.Form1.resources
+C:\Users\khanh\Documents\GitHub\ProjectMaHoa\FinalCrypt\obj\Debug\FinalCrypt.Properties.Resources.resources
+C:\Users\khanh\Documents\GitHub\ProjectMaHoa\FinalCrypt\obj\Debug\FinalCrypt.csproj.GenerateResource.Cache
